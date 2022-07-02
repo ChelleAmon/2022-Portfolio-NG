@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './modules/about/pages/about/about.component';
+import { ContactsComponent } from './modules/contacts/pages/contacts/contacts.component';
+import { FooterComponent } from './modules/footer/pages/footer/footer.component';
+import { LandingComponent } from './modules/landing/page/landing/landing.component';
+import { ProjectsComponent } from './modules/projects/pages/projects/projects.component';
+import { SkillsComponent } from './modules/skills/pages/skills/skills.component';
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
@@ -9,33 +15,33 @@ const routes: Routes = [
   },
   {
     path: "Hey!",
-    loadChildren: () => import('./modules/landing/landing.module')
-    .then(m => m.LandingModule)
+    component: LandingComponent,
+    children: []
   },
   {
-    path: "about",
-    loadChildren: () => import('./modules/about/about.module')
-    .then(m => m.AboutModule)
+    path: "About",
+    component: AboutComponent,
+    children: []
   },
   {
-    path: "skills",
-    loadChildren: () => import('./modules/skills/skills.module')
-    .then(m => m.SkillsModule)
+    path: "Skills",
+    component: SkillsComponent,
+    children: []
   },
   {
-    path: "projects",
-    loadChildren: () => import('./modules/projects/projects.module')
-    .then(m => m.ProjectsModule)
+    path: "Projects",
+    component: ProjectsComponent,
+    children: []
   },
   {
-    path: "Contact-me!",
-    loadChildren: () => import('./modules/contacts/contacts.module')
-    .then(m => m.ContactsModule)
+    path: "Contacts",
+    component: ContactsComponent,
+    children: []
   },
   {
-    path: "Media-Accounts",
-    loadChildren: () => import('./modules/footer/footer.module')
-    .then(m => m.FooterModule)
+    path: "Accounts",
+    component: FooterComponent,
+    children: []
   },
 
 ];
