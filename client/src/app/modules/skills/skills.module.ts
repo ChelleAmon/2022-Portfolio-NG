@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SkillsRoutingModule } from './skills-routing.module';
+import { SkillsComponent } from './pages/skills/skills.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SkillsComponent
+  ],
   imports: [
     CommonModule,
     SkillsRoutingModule
